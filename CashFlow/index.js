@@ -31,7 +31,7 @@ app.post("/add", (req, res) => {
         "Info": info,
         "Date": date_input
     };
-
+    console.log(data);
     db.collection('users').insertOne(data, (err, collection) => {
         if (err) {
             console.error("Error inserting record:", err);
